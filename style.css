@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 18px;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #262626;
+    line-height: 1.5;
+    background-color: #262626;
+}
+section{
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-top: 9vh;
+    gap: 20px;
+    max-width: 1200px;
+}
+.profile-left{
+    border-radius: 20px;
+    padding: 30px 40px 20px 40px;
+    /* background: linear-gradient(170deg, #90CB8C 0%, rgba(248, 248, 255, 0) 54.5%); */
+    /* background-color: #F8F8FF; */
+    background-image: url(img/bg2.svg);
+    background-attachment: fixed;
+    background-position: right;
+
+}
+.profile-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-head img{
+    width: 150px;
+    border: 2px solid #0053a0;
+    border-radius: 50%;
+}
+.profile-head h1{
+    letter-spacing: 1px;
+    margin-top: 5px;
+    color: #003b9a;
+}
+.contact-info{
+    margin-top: 30px;
+}
+.contact-info h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-container{
+    display: flex;
+    gap: 20px;
+}
+.contact-label b, .contact-label-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+.social-links img{
+    width: 35px;
+}
+.social-links img:hover{
+    opacity: 0.5;
+    transition: opacity .3s;
+    transform: scale(.9);
+}
+
+.profile-right{
+    padding: 33px 30px;
+    background-image: url(img/bg2.svg);
+    background-position: right;
+    /* background: linear-gradient(180deg, #90CB8C 1.50%, rgba(177, 255, 177, 0) 22%), #F8F8FF; */
+    border-radius: 20px;
+    max-height: 560px;
+    animation: animation 30s ease-in;
+    animation-fill-mode: forwards;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-me{
+    grid-column: span 2;
+}
+
+@keyframes animation {
+    50%{
+        background-position: top right;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+
+.about-me h1, .personal-info h1, .web-dev-skills h1{
+    border-bottom: 1px solid #0053a0;
+    padding-bottom: 10px;
+}
+.about-me p, .personal-info div{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.about-me b{
+    font-size: 30px; 
+    color: #003b9a;
+}
+.about-me blockquote{
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+cite{
+    margin-left: 70%;
+    font-weight: 500;
+    color: #003b9a;
+}
+.personal-info, .web-dev-skills{
+    margin-top: 35px;
+    margin-left: 10px;
+}
+.container{
+    display: flex;
+    gap: 30px;
+}
+.personal-info b{
+    margin-right: 10px;
+}
+.web-dev-skills div{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.web-dev-skills li, .personal-info p{
+    margin-bottom: 10px;
+}
+
+@media (max-width: 376px) {
+    html{
+        font-size: 17px;
+    }
+    body{
+        line-height: 1.4;
+    }
+    section{
+        flex-direction: column;
+        margin-top: unset;
+    }
+    .profile-left{
+        width: 80vw;
+        /* margin: 20px 40px 0 40px; */
+    }
+
+    .profile-right{
+        grid-template-columns: 100%;
+        max-height: max-content;
+        gap: unset;
+    }
+    .about-me{
+        grid-column: unset;
+    }
+    cite{
+        margin-left: 40%;
+    }
+    .about-me p, .personal-info div{
+        margin-top: 15px;
+        margin-left: unset;
+    }
+    .web-dev-skills div{
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    .container{
+        gap: 15px;
+    }
+    .web-dev-skills .container{
+        gap: 90px;
+    }
+}
